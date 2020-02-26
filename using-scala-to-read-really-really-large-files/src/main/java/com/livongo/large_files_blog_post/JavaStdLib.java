@@ -22,8 +22,8 @@ public class JavaStdLib implements FileReader {
 
     @Override
     public Result consume(Path path) {
-        Pattern columnDelimiters = Pattern.compile("\\s*\\|\\s*");
-        Pattern nameDelimiter = Pattern.compile(", ");
+        Pattern columnDelimiters = Pattern.compile("\\|");
+        Pattern nameDelimiter = Pattern.compile(",");
         try (BufferedReader reader = Files.newBufferedReader(path)) {
             String readLine;
             int lines = 0;
